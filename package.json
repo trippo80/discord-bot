@@ -1,0 +1,14 @@
+{
+    "name": "trippo-discord-bot",
+    "version": "1.0.0",
+    "description": "simple discord bot",
+    "main": "bot.js",
+    "author": "Magnus Palm",
+    "dependencies": {
+        "discord.js": "^11.2.1",
+        "dotenv": "^4.0.0",
+        "lodash": "^4.17.4",
+        "moment": "^2.19.4",
+        "winston": "^2.4.0"
+    }
+}
