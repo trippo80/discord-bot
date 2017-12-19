@@ -6,7 +6,8 @@ const _ = require('lodash');
 let data = {
     lunch: {
         next: null,
-        timer: null
+        timer: null,
+        place: null
     }
 };
 
