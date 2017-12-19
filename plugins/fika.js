@@ -1,3 +1,9 @@
+/**
+ * Fika plugin
+ * @module plugins/fika
+ * @author Magnus Palm, https://github.com/trippo80
+ */
+
 const moment = require('moment');
 const helpers = require('../lib/helpers');
 const _ = require('lodash');
