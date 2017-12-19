@@ -44,9 +44,13 @@ module.exports = {
             data.fika.next = moment().add(minutes, 'm');
             message.channel.send('<@!' + message.author.id + '> Ok, fika om ' + minutes + ' minut(er)!');
 
+            // Reset timer if it is set
+            if (data.fika.timer) {
+                clearTimeout(data.fika.timer);
+            }
+
             // Create timer
             data.fika.timer = setTimeout(function () {
-                clearInterval(data.fika.interval);
                 message.channel.send('@everyone Nu är det fika!!');
                 data.fika.next = null;
                 data.fika.timer = null;
