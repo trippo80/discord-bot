@@ -44,6 +44,11 @@ module.exports = {
             data.fika.next = moment().add(minutes, 'm');
             message.channel.send('<@!' + message.author.id + '> Ok, fika om ' + minutes + ' minut(er)!');
 
+            // Clear existing timer before creating a new one.
+            if (data.fika.timer !== null) {
+              clearInterval(data.fika.timer);
+            }
+
             // Create timer
             data.fika.timer = setTimeout(function () {
                 clearInterval(data.fika.interval);

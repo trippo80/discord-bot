@@ -47,6 +47,11 @@ module.exports = {
             data.lunch.next = moment().add(minutes, 'm');
             message.channel.send('<@!' + message.author.id + '> Ok, avfärd från sajens om ' + minutes + ' minut(er)' + (data.lunch.place ? ' mot ' + data.lunch.place : '') + '!');
 
+            // Clear existing timer before creating a new one.
+            if (data.lunch.timer !== null) {
+              clearInterval(data.lunch.timer);
+            }
+
             // Create timer
             data.lunch.timer = setTimeout(function () {
                 clearInterval(data.lunch.interval);
