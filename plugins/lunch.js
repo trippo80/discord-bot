@@ -1,3 +1,9 @@
+/**
+ * Lunch plugin
+ * @module plugins/lunch
+ * @author Hampus Nordin, https://github.com/hampusn
+ */
+
 const moment = require('moment');
 const helpers = require('../lib/helpers');
 const _ = require('lodash');
