@@ -1,5 +1,6 @@
 const moment = require('moment');
 const helpers = require('../lib/helpers');
+const _ = require('lodash');
 
 // setup data object
 let data = {
@@ -27,7 +28,7 @@ module.exports = {
         if (args[0]) {
             // Yes - convert to minutes.
             let minutes = parseInt(args[0]);
-            if (! minutes || minutes < 0) {
+            if (! _.isInteger(minutes) || minutes < 0) {
                 // Argument doesn't seem to be minutes.
                 message.channel.send('<@!' + message.author.id + '> Förstod inte det där..');
                 return;
