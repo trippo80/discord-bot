@@ -27,7 +27,7 @@ module.exports = {
         if (args[0]) {
             // Yes - convert to minutes.
             let minutes = parseInt(args[0]);
-            if (! minutes) {
+            if (! minutes || minutes < 0) {
                 // Argument doesn't seem to be minutes.
                 message.channel.send('<@!' + message.author.id + '> Förstod inte det där..');
                 return;
