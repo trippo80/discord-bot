@@ -1,3 +1,8 @@
+/**
+ * Discord bot
+ * @author Magnus Palm, https://github.com/trippo80
+ */
+
 const _ = require('lodash');
 const Discord = require('discord.js');
 const logger = require('winston');
