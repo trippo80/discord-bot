@@ -66,11 +66,6 @@ module.exports = {
                 clearTimeout(data.lunch.timer);
             }
 
-            // Clear existing timer before creating a new one.
-            if (data.lunch.timer !== null) {
-              clearInterval(data.lunch.timer);
-            }
-
             // Create timer
             data.lunch.timer = setTimeout(function () {
                 message.channel.send('@everyone Nu är det dags att gå' + (data.lunch.place ? ' till ' + data.lunch.place : '') + '!!');
