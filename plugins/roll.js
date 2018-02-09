@@ -1,6 +1,6 @@
 /**
- * Roll plugin
- * @module plugins/roll
+ * Slumpa plugin
+ * @module plugins/slumpa
  * @author Hampus Nordin, https://github.com/hampusn
  */
 
@@ -32,13 +32,13 @@ module.exports = {
         const args = helpers.getCommandArguments(message);
 
         // Make sure we got a command and it's the one we want.
-        if (! cmd || cmd !== 'roll') {
+        if (! cmd || cmd !== 'slumpa') {
             return;
         }
 
         const [min = defaults.min, max = defaults.max] = (args[0] || '').split('-').map(x => parseInt(x) || undefined);
         const rolled = getRandomInt(min, max);
 
-        message.channel.send(`<@!${message.author.id}> rolled a ${rolled} of ${min === defaults.min ? max : min + '-' + max}.`);
+        message.channel.send(`<@!${message.author.id}> slumpade en ${rolled} av ${min === defaults.min ? max : min + '-' + max}.`);
     }
 };
